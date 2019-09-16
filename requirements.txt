@@ -1,6 +1,2 @@
-gensim
-numpy
 rise
-scikit-learn
-spacy
-matplotlib
+jupyterthemes
