@@ -13284,6 +13284,20 @@ a.anchor-link {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create the cat dictionary here</span>
+<span class="n">cat</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;physical&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;animal&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;lives&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+        <span class="s1">&#39;legs&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s1">&#39;maxAge&#39;</span><span class="p">:</span> <span class="mi">15</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;behavior&#39;</span><span class="p">:{</span>
+        <span class="s1">&#39;bites&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s1">&#39;sound&#39;</span><span class="p">:</span> <span class="s1">&#39;meow&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;agressiveness&#39;</span><span class="p">:</span> <span class="s1">&#39;low&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cat</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13304,7 +13318,8 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lives</span> <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="s1">&#39;physical&#39;</span><span class="p">][</span><span class="s1">&#39;lives&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lives</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13325,7 +13340,9 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">globalAttributes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cat</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="n">nestedAttributes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cat</span><span class="p">[</span><span class="s1">&#39;physical&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">cat</span><span class="p">[</span><span class="s1">&#39;behavior&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;the cat possess&#39;</span><span class="p">,</span> <span class="n">globalAttributes</span><span class="p">,</span> <span class="s1">&#39;global attributes and&#39;</span><span class="p">,</span> <span class="n">nestedAttributes</span><span class="p">,</span> <span class="s1">&#39;nested attributes&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13361,7 +13378,20 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dog</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;physical&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;animal&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;lives&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s1">&#39;legs&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s1">&#39;maxAge&#39;</span><span class="p">:</span> <span class="mi">11</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;behavior&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;bites&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;sound&#39;</span><span class="p">:</span> <span class="s1">&#39;bark&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;aggressiveness&#39;</span><span class="p">:</span> <span class="s1">&#39;medium&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">dog</span> <span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13382,7 +13412,9 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;dog before removal&#39;</span><span class="p">,</span> <span class="n">dog</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">dog</span><span class="p">[</span><span class="s1">&#39;physical&#39;</span><span class="p">][</span><span class="s1">&#39;animal&#39;</span><span class="p">]</span> 
+<span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;dog after removal&#39;</span><span class="p">,</span> <span class="n">dog</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13413,7 +13445,16 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">livingThings</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;animals&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;instances&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;humans&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;instances&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span> <span class="n">livingThings</span> <span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13424,7 +13465,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Insert the list of animals (the cat and the dog dicts) inside a <em>'types'</em> field under the <em>'animals'</em> field in the livingThings.</p>
+<p>Insert the list of animals (the cat and the dog dicts) inside a <em>'instances'</em> field under the <em>'animals'</em> field in the livingThings.</p>
 
 </div>
 </div>
@@ -13434,7 +13475,9 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">livingThings</span><span class="p">[</span><span class="s1">&#39;animals&#39;</span><span class="p">][</span><span class="s1">&#39;instances&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dog</span><span class="p">)</span>
+<span class="n">livingThings</span><span class="p">[</span><span class="s1">&#39;animals&#39;</span><span class="p">][</span><span class="s1">&#39;instances&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cat</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">livingThings</span> <span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13455,7 +13498,23 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># First we intialize a variable to increment the total age from the animal instances</span>
+<span class="n">totalAge</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># Second we loop over the animal instances to get their &#39;maxAge&#39; and add it to the totalAge variable</span>
+<span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="n">livingThings</span><span class="p">[</span><span class="s1">&#39;animals&#39;</span><span class="p">][</span><span class="s1">&#39;instances&#39;</span><span class="p">]:</span>
+    <span class="n">totalAge</span> <span class="o">=</span> <span class="n">totalAge</span> <span class="o">+</span> <span class="n">animal</span><span class="p">[</span><span class="s1">&#39;physical&#39;</span><span class="p">][</span><span class="s1">&#39;maxAge&#39;</span><span class="p">]</span>
+<span class="c1"># Third we use basic math operations to compute the average max age and put it into a &#39;averageMaxAge&#39; variable</span>
+<span class="c1"># total / numberOfElements = basic average here it will be : (11+15) / 2 </span>
+<span class="c1"># the number of elements is the length of the list of animal instances</span>
+<span class="n">averageMaxAge</span> <span class="o">=</span> <span class="n">totalAge</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span> <span class="n">livingThings</span><span class="p">[</span><span class="s1">&#39;animals&#39;</span><span class="p">][</span><span class="s1">&#39;instances&#39;</span><span class="p">]</span> <span class="p">)</span> 
+<span class="c1"># Finally we put the value into the desired field of our livingThings dictionary</span>
+<span class="n">livingThings</span><span class="p">[</span><span class="s1">&#39;animals&#39;</span><span class="p">][</span><span class="s1">&#39;averageMaxAge&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">averageMaxAge</span>
+
+<span class="c1"># Now we can print the averageMaxAge</span>
+<span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;average maximum age of animals =&#39;</span><span class="p">,</span> <span class="n">livingThings</span><span class="p">[</span><span class="s1">&#39;animals&#39;</span><span class="p">][</span><span class="s1">&#39;averageMaxAge&#39;</span><span class="p">]</span> <span class="p">)</span>
+
+<span class="c1"># and print our whole dictionary</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">livingThings</span> <span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13483,7 +13542,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Now you can easily continue by using your neighboor as a source of infos </span>
 </pre></div>
 
     </div>

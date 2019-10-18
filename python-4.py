@@ -61,6 +61,20 @@ print(user)
 
 
 # create the cat dictionary here
+cat = {
+    'physical': {
+        'animal': True,
+        'lives': 9,
+        'legs': 4,
+        'maxAge': 15
+    },
+    'behavior':{
+        'bites': False,
+        'sound': 'meow',
+        'agressiveness': 'low'
+    }
+}
+print(cat)
 
 
 # Print the number of lives of this cat:
@@ -68,7 +82,8 @@ print(user)
 # In[ ]:
 
 
-
+lives = cat['physical']['lives']
+print(lives)
 
 
 # Print the number of attributes the cat possess:
@@ -76,7 +91,9 @@ print(user)
 # In[ ]:
 
 
-
+globalAttributes = len(cat.keys())
+nestedAttributes = len(cat['physical'].keys()) + len(cat['behavior'].keys())
+print('the cat possess', globalAttributes, 'global attributes and', nestedAttributes, 'nested attributes')
 
 
 # Create another dictionary representing some dog attributes:
@@ -93,7 +110,20 @@ print(user)
 # In[ ]:
 
 
-
+dog = {
+    'physical': {
+        'animal': True,
+        'lives': 1,
+        'legs': 4,
+        'maxAge': 11
+    },
+    'behavior': {
+        'bites': True,
+        'sound': 'bark',
+        'aggressiveness': 'medium'
+    }
+}
+print( dog )
 
 
 # Remove the *'animal'* attribute from both the cat and dog dictionaries:
@@ -101,7 +131,9 @@ print(user)
 # In[ ]:
 
 
-
+print( 'dog before removal', dog)
+del dog['physical']['animal'] 
+print( 'dog after removal', dog)
 
 
 # ## Going deeper in nested dictionaries
@@ -115,15 +147,26 @@ print(user)
 # In[ ]:
 
 
+livingThings = {
+    'animals': {
+        'instances': list()
+    },
+    'humans': {
+        'instances': list()
+    }
+}
+
+print( livingThings )
 
 
-
-# Insert the list of animals (the cat and the dog dicts) inside a *'types'* field under the *'animals'* field in the livingThings. 
+# Insert the list of animals (the cat and the dog dicts) inside a *'instances'* field under the *'animals'* field in the livingThings. 
 
 # In[ ]:
 
 
-
+livingThings['animals']['instances'].append(dog)
+livingThings['animals']['instances'].append(cat)
+print( livingThings )
 
 
 # Insert the *'averageMaxAge'* in the *'animals'* field. (Use basic math operations for this - see course 1 -)
@@ -131,7 +174,23 @@ print(user)
 # In[ ]:
 
 
+# First we intialize a variable to increment the total age from the animal instances
+totalAge = 0
+# Second we loop over the animal instances to get their 'maxAge' and add it to the totalAge variable
+for animal in livingThings['animals']['instances']:
+    totalAge = totalAge + animal['physical']['maxAge']
+# Third we use basic math operations to compute the average max age and put it into a 'averageMaxAge' variable
+# total / numberOfElements = basic average here it will be : (11+15) / 2 
+# the number of elements is the length of the list of animal instances
+averageMaxAge = totalAge / len( livingThings['animals']['instances'] ) 
+# Finally we put the value into the desired field of our livingThings dictionary
+livingThings['animals']['averageMaxAge'] = averageMaxAge
 
+# Now we can print the averageMaxAge
+print( 'average maximum age of animals =', livingThings['animals']['averageMaxAge'] )
+
+# and print our whole dictionary
+print( livingThings )
 
 
 # Create your neighboor as a dictionary.
@@ -144,7 +203,7 @@ print(user)
 # In[ ]:
 
 
-
+# Now you can easily continue by using your neighboor as a source of infos 
 
 
 # Create yourself as a dictionary.
