@@ -18,5 +18,10 @@ Start using it:
 - Open terminal(unix/mac) or CommandLine(windows), type `python` or `python3` or `py` (depends on your environnement) to start an interactive python environnement
 - Create a file named `my_super_program.py`, type `print('hello')` inside, and save. Execute this file by typing `python3 my_super_program.py`.
 
+To run jupyter notebooks (.ipynb files with interactive python), please open a temrinal and type:
+```
+pip install jupyter
+```
+
 ## Install developpement environnement
 To code with ease you may need an IDE for smoother coding. I would suggest [Visual Studio Code](https://code.visualstudio.com/Download) combined with the Python plugin from Microsoft (ms-python.python). For a python only IDE the best one would be [PyCharm](https://www.jetbrains.com/pycharm/).
