@@ -1,4 +1,4 @@
-# essec-python-1
+# ESSEC GBBA Python and Programming
 Introduction to programming (using Python 3). Courses made for ESSEC Business School (Global BBA).
 
 In this course you will learn the basics of programming and programming with Python. Elementary notions will be displayed in jupyter notebooks. To use these files you will need to either:
