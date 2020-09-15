@@ -8,7 +8,9 @@
 # 
 # ### ESSEC Business School
 # 
-# [gael.guibon@inria.fr](gael.guibon@inria.fr)
+# [gael.guibon@gmail.com](gael.guibon@gmail.com)
+# 
+# [gael.guibon@telecom-paris.fr](gael.guibon@telecom-paris.fr)
 # 
 # Original content inspired by [Clement Plancq's IM courses](https://github.com/clement-plancq/python-im)
 # 
@@ -54,8 +56,8 @@ students = [] # list initialization. Still empty
 students = list() # another list initialization. Empty
 
 # initialize with values
-students = ['Vincent','Alizée', 'Medhi', 'Zhuoran', 'Cynthia', 'Alexandre'] # initialize list with values (prefered way)
-students = list(['Vincent','Alizée', 'Medhi', 'Zhuoran', 'Cynthia', 'Alexandre']) # overkill !
+students = ['Brice','Ghita', 'Joshua', 'Maty', 'Quynh Chi', 'Julien'] # initialize list with values (prefered way)
+students = list(['Brice','Ghita', 'Joshua', 'Maty', 'Quynh Chi', 'Julien']) # overkill !
 
 # access
 students[0] # access element by index
@@ -97,14 +99,14 @@ print(type(superList[0]), type(superList[1]), type(superList[2]) )
 
 
 # init
-students = ['Vincent','Alizée', 'Medhi', 'Zhuoran', 'Cynthia', 'Alexandre']
+students = ['Brice','Ghita', 'Joshua', 'Maty', 'Quynh Chi', 'Julien']
 
 
 # In[ ]:
 
 
 # append a student
-students.append('Jiang')
+students.append('Monica')
 print(students)
 
 
@@ -112,7 +114,7 @@ print(students)
 
 
 # append multiple students
-students.extend(['Dionysios', 'Mekhla'])
+students.extend(['Enora', 'Ishita'])
 print( students )
 
 
@@ -128,7 +130,7 @@ print(mekhla)
 
 
 # remove first element with this value
-students.remove('Alizée')
+students.remove('Monica')
 print(students)
 
 
@@ -136,10 +138,10 @@ print(students)
 
 
 # sort list and get index
-print('Vincent is index', students.index('Vincent'))
+print('Brice is index', students.index('Brice'))
 students.sort()
 print(students)
-print('Vincent is now index', students.index('Vincent'))
+print('Brice is now index', students.index('Brice'))
 
 
 # # Length & sublists
@@ -271,9 +273,9 @@ while choice not in choices:
 # In[ ]:
 
 
-for student in ['Vincent','Alizée', 'Medhi', 'Zhuoran', 'Cynthia', 'Alexandre']:
-    if student != 'Alexandre':
-        print(student, 'is not Alexandre!')
+for student in ['Brice','Ghita', 'Joshua', 'Maty', 'Quynh Chi', 'Julien']:
+    if student != 'Julien':
+        print(student, 'is not Julien!')
         break # try it with 'continue' instead
     else:
         print('found him!')
@@ -429,4 +431,4 @@ user = {
 # - Open terminal(unix/mac) or CommandLine(windows), type `python` to start an interactive python environnement
 # - Create a file named `my_super_program.py` and type `print('hello')` inside. Execute this file by typing `python3 my_super_program.py`.
 # 
-# To code you mmay need an IDE for smoother coding. I would suggest [Visual Studio Code](https://code.visualstudio.com/Download). For a python only IDE the best one would be [PyCharm](https://www.jetbrains.com/pycharm/).
+# To code you may need an IDE for smoother coding. I would suggest [Visual Studio Code](https://code.visualstudio.com/Download). For a python only IDE the best one would be [PyCharm](https://www.jetbrains.com/pycharm/).

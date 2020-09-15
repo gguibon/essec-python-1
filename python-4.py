@@ -8,7 +8,9 @@
 # 
 # ### ESSEC Business School
 # 
-# [gael.guibon@inria.fr](gael.guibon@inria.fr)
+# [gael.guibon@gmail.com](gael.guibon@gmail.com)
+# 
+# [gael.guibon@telecom-paris.fr](gael.guibon@telecom-paris.fr)
 # 
 # Original content, some parts inspired by [Clement Plancq's IM courses](https://github.com/clement-plancq/python-im)
 # 

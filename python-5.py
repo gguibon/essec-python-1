@@ -7,7 +7,9 @@
 # 
 # ### ESSEC Business School
 # 
-# [gael.guibon@inria.fr](gael.guibon@inria.fr)
+# [gael.guibon@gmail.com](gael.guibon@gmail.com)
+# 
+# [gael.guibon@telecom-paris.fr](gael.guibon@telecom-paris.fr)
 # 
 # Licenced under Affero GNU3
 
@@ -32,7 +34,7 @@
 # - Open terminal(unix/mac) or CommandLine(windows), type `python` to start an interactive python environnement
 # - Create a file named `my_super_program.py` and type `print('hello')` inside. Execute this file by typing `python3 my_super_program.py`.
 # 
-# To code you mmay need an IDE for smoother coding. I would suggest [Visual Studio Code](https://code.visualstudio.com/Download). For a python only IDE the best one would be [PyCharm](https://www.jetbrains.com/pycharm/).
+# To code you may need an IDE for smoother coding. I would suggest [Visual Studio Code](https://code.visualstudio.com/Download). For a python only IDE the best one would be [PyCharm](https://www.jetbrains.com/pycharm/).
 
 # # File handling
 # A program often need to access a file from your file system. For this you need:
@@ -77,7 +79,7 @@ myFile.close()
 myFile = open('test.txt', 'r') # open an existing file with 'r' (r = read)
 fileContent = myFile.read() # put the content into a variable
 myFile.close()
-print(fileContent) # display the content
+print(fileContent, type(fileContent)) # display the content
 
 
 # Append content to a file:
@@ -154,7 +156,7 @@ print(content)
 myFile = open('test.json', 'r')
 content = json.load(myFile)
 print(type(content))
-print(content)
+#print(content)
 print(content['run'])
 
 
@@ -184,7 +186,7 @@ print('from', type(events) , 'to', type(eventsString) )
 
 
 # first import the sys module (sys = system)
-import sys
+import sys, json, re
 
 
 # Without exception handling the program will crash:
@@ -201,6 +203,7 @@ print( cake ) # variable cake is not defined, hence it will crash
 # In[ ]:
 
 
+del cake
 try:
     print( cake )
 except:
@@ -295,7 +298,7 @@ writeDictIntoAFile('events.json', eventsInitial) # creates the json file (you ca
 # In[ ]:
 
 
-# Example with dict and basic functions and health management
+# Example with dict and  ba sic functions and health management
 # Placeholders for you to insert requested code
 player = dict()
 print("Hello Player One, what's your name?")

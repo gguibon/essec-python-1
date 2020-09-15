@@ -12947,8 +12947,13 @@ ul.typeahead-list  > li > a.pull-right {
 /*# sourceMappingURL=style.min.css.map */
     </style>
 <style type="text/css">
-    .highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f8f8f8; }
+    pre { line-height: 125%; margin: 0; }
+td.linenos pre { color: #000000; background-color: #f0f0f0; padding: 0 5px 0 5px; }
+span.linenos { color: #000000; background-color: #f0f0f0; padding: 0 5px 0 5px; }
+td.linenos pre.special { color: #000000; background-color: #ffffc0; padding: 0 5px 0 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding: 0 5px 0 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
@@ -13017,6 +13022,19 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
+<style type="text/css">
+    /*This file contains any manual css for this page that needs to override the global styles.
+This is only required when different pages style the same element differently. This is just
+a hack to deal with our current css styles and no new styling should be added in this file.*/
+
+#ipython-main-app {
+    position: relative;
+}
+#jupyter-main-app {
+    position: relative;
+}
+
+    </style>
 
 
 <style type="text/css">
@@ -13078,7 +13096,8 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Introduction-to-Programming-&#8211;-Python">Introduction to Programming &#8211; Python<a class="anchor-link" href="#Introduction-to-Programming-&#8211;-Python">&#182;</a></h1><hr>
-<h2 id="Course-3-&#8211;-dictionaries-&amp;-functions">Course 3 &#8211; dictionaries &amp; functions<a class="anchor-link" href="#Course-3-&#8211;-dictionaries-&amp;-functions">&#182;</a></h2><h3 id="ESSEC-Business-School">ESSEC Business School<a class="anchor-link" href="#ESSEC-Business-School">&#182;</a></h3><p><a href="gael.guibon@inria.fr">gael.guibon@inria.fr</a></p>
+<h2 id="Course-3-&#8211;-dictionaries-&amp;-functions">Course 3 &#8211; dictionaries &amp; functions<a class="anchor-link" href="#Course-3-&#8211;-dictionaries-&amp;-functions">&#182;</a></h2><h3 id="ESSEC-Business-School">ESSEC Business School<a class="anchor-link" href="#ESSEC-Business-School">&#182;</a></h3><p><a href="gael.guibon@gmail.com">gael.guibon@gmail.com</a></p>
+<p><a href="gael.guibon@telecom-paris.fr">gael.guibon@telecom-paris.fr</a></p>
 <p>Original content inspired by <a href="https://github.com/clement-plancq/python-im">Clement Plancq's IM courses</a></p>
 <p>Licenced under Affero GNU3</p>
 
@@ -13145,6 +13164,8 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># more concrete example</span>
 <span class="n">player</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;gaël&quot;</span><span class="p">,</span> <span class="s2">&quot;health&quot;</span><span class="p">:</span><span class="mi">200</span> <span class="p">}</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">player</span><span class="p">)</span>
+
+<span class="n">student</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;zhanyi&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="o">....</span> <span class="s1">&#39;friends&#39;</span><span class="p">:[</span><span class="s1">&#39;friend1&#39;</span><span class="p">,</span> <span class="s1">&#39;friend2&#39;</span><span class="p">]</span> <span class="p">}</span>
 </pre></div>
 
     </div>
@@ -13168,7 +13189,9 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">player</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">player</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;whatever&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">player</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13249,7 +13272,11 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># first populate the dict</span>
-<span class="n">player</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;gael&#39;</span><span class="p">,</span>   <span class="s1">&#39;inventory&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;rose&#39;</span><span class="p">,</span> <span class="s1">&#39;pencil&#39;</span><span class="p">,</span> <span class="s1">&#39;smartphone&#39;</span><span class="p">],</span>   <span class="s1">&#39;grade&#39;</span><span class="p">:</span><span class="s1">&#39;noob&#39;</span><span class="p">}</span>
+<span class="c1"># player = {&#39;name&#39;:&#39;gael&#39;,   &#39;inventory&#39;: [&#39;rose&#39;, &#39;pencil&#39;, &#39;smartphone&#39;],   &#39;grade&#39;:&#39;noob&#39;}</span>
+<span class="n">player</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="n">player</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;gael&#39;</span>
+<span class="n">player</span><span class="p">[</span><span class="s1">&#39;inventory&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;rose&#39;</span><span class="p">,</span> <span class="s1">&#39;pencil&#39;</span><span class="p">,</span> <span class="s1">&#39;smartphone&#39;</span><span class="p">]</span>
+<span class="n">player</span><span class="p">[</span><span class="s1">&#39;grade&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;noob&#39;</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;player =&#39;</span><span class="p">,</span> <span class="n">player</span><span class="p">)</span>
 <span class="c1"># get list of keys</span>
 <span class="nb">print</span><span class="p">(</span> <span class="n">player</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="nb">type</span><span class="p">(</span><span class="n">player</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span> <span class="nb">len</span><span class="p">(</span><span class="n">player</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="p">)</span>
@@ -13443,20 +13470,20 @@ ELSE:
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get the input function and display a greeting message</span>
-<span class="n">player</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span> <span class="c1"># Get the input function and display a greeting message</span>
+<span class="n">player</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span> 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello Player One, what&#39;s your name?&quot;</span><span class="p">)</span>
 <span class="n">player</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome&quot;</span><span class="p">,</span> <span class="n">player</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
 
 <span class="n">choice</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="n">events</span> <span class="o">=</span> 
-<span class="p">{</span> 
+<span class="n">events</span> <span class="o">=</span> <span class="p">{</span> 
     <span class="s1">&#39;first&#39;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;Game Over! Try again&#39;</span> <span class="o">+</span> <span class="n">player</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
     <span class="p">},</span>
     <span class="s1">&#39;second&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;Upon opening the door, you can see a huge fest with exquisite meals everywhere.&#39;</span>
+        <span class="s1">&#39;messages&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Upon opening the door, you can see a huge fest with exquisite meals everywhere.&#39;</span><span class="p">,</span> <span class="s1">&#39;heyy&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;follow&#39;</span><span class="p">:{}</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="n">pastEvents</span> <span class="o">=</span> <span class="p">[]</span>  
@@ -13470,7 +13497,12 @@ ELSE:
     <span class="n">choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">choice</span> <span class="ow">in</span> <span class="n">events</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
         <span class="n">pastEvents</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">choice</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">events</span><span class="p">[</span><span class="n">choice</span><span class="p">][</span><span class="s1">&#39;message&#39;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">events</span><span class="p">[</span><span class="n">choice</span><span class="p">][</span><span class="s1">&#39;message&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="nb">str</span><span class="p">():</span>
+        <span class="k">if</span> <span class="s1">&#39;messages&#39;</span> <span class="ow">in</span> <span class="n">events</span><span class="p">[</span><span class="n">choice</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">message</span> <span class="ow">in</span> <span class="n">events</span><span class="p">[</span><span class="n">choice</span><span class="p">][</span><span class="s1">&#39;messages&#39;</span><span class="p">]:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">events</span><span class="p">[</span><span class="n">choice</span><span class="p">][</span><span class="s1">&#39;message&#39;</span><span class="p">])</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;WRONG : Possible choices&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">events</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="p">)</span>
 
@@ -13508,7 +13540,7 @@ ELSE:
 <li>Open terminal(unix/mac) or CommandLine(windows), type <code>python</code> to start an interactive python environnement</li>
 <li>Create a file named <code>my_super_program.py</code> and type <code>print('hello')</code> inside. Execute this file by typing <code>python3 my_super_program.py</code>.</li>
 </ul>
-<p>To code you mmay need an IDE for smoother coding. I would suggest <a href="https://code.visualstudio.com/Download">Visual Studio Code</a>. For a python only IDE the best one would be <a href="https://www.jetbrains.com/pycharm/">PyCharm</a>.</p>
+<p>To code you may need an IDE for smoother coding. I would suggest <a href="https://code.visualstudio.com/Download">Visual Studio Code</a>. For a python only IDE the best one would be <a href="https://www.jetbrains.com/pycharm/">PyCharm</a>.</p>
 
 </div>
 </div>

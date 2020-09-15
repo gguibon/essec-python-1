@@ -8,7 +8,9 @@
 # 
 # ### ESSEC Business School
 # 
-# [gael.guibon@inria.fr](gael.guibon@inria.fr)
+# [gael.guibon@gmail.com](gael.guibon@gmail.com)
+# 
+# [gael.guibon@telecom-paris.fr](gael.guibon@telecom-paris.fr)
 # 
 # Original content inspired by [Clement Plancq's IM courses](https://github.com/clement-plancq/python-im)
 # 
@@ -53,6 +55,8 @@ print(dico)
 player = { "name":"gaël", "health":200 }
 print(player)
 
+student = {'name':'zhanyi', 'age'.... 'friends':['friend1', 'friend2'] }
+
 
 # # Access data from a dict
 # - By specifying the key : number, boolean  or String
@@ -61,7 +65,9 @@ print(player)
 # In[ ]:
 
 
-player["name"]
+player["name"] = 'whatever'
+print(player['name'])
+print(player)
 
 
 # In[ ]:
@@ -104,7 +110,11 @@ print(player)
 
 
 # first populate the dict
-player = {'name':'gael',   'inventory': ['rose', 'pencil', 'smartphone'],   'grade':'noob'}
+# player = {'name':'gael',   'inventory': ['rose', 'pencil', 'smartphone'],   'grade':'noob'}
+player = dict()
+player['name'] = 'gael'
+player['inventory'] = ['rose', 'pencil', 'smartphone']
+player['grade'] = 'noob'
 print('player =', player)
 # get list of keys
 print( player.keys(), type(player.keys()), len(player.keys()) )
@@ -212,35 +222,40 @@ print(user)
 
 
 # Get the input function and display a greeting message
-player = dict()
+player = dict() 
 print("Hello Player One, what's your name?")
 player['name'] = input()
 print("Welcome", player['name'])
 
 choice = ''
-events = 
-{ 
-    'first': {
-        'message': 'Game Over! Try again' + player['name']
-    },
-    'second': {
-        'message': 'Upon opening the door, you can see a huge fest with exquisite meals everywhere.'
-    }
+events = { 
+   'first': {
+       'message': 'Game Over! Try again' + player['name']
+   },
+   'second': {
+       'messages': ['Upon opening the door, you can see a huge fest with exquisite meals everywhere.', 'heyy'],
+       'follow':{}
+   }
 }
 pastEvents = []  
 
 while choice not in events.keys():
-    print('''Your are in a tiny room. Humidity fills the air but your stomach reminds you that you are very hungry.
-    You are in front of two doors. Behind the first one you can hear muffled voices. 
-    Behind the second one you can smell something intriguing.''')
-    print('Which door do you choose? Type', list(events.keys())[0], 'for the first room and', list(events.keys())[1], 
-          'for the second room.')
-    choice = input()
-    if choice in events.keys():
-        pastEvents.append(choice)
-        print(events[choice]['message'])
-    else:
-        print('WRONG : Possible choices', list(events.keys()) )
+   print('''Your are in a tiny room. Humidity fills the air but your stomach reminds you that you are very hungry.
+   You are in front of two doors. Behind the first one you can hear muffled voices. 
+   Behind the second one you can smell something intriguing.''')
+   print('Which door do you choose? Type', list(events.keys())[0], 'for the first room and', list(events.keys())[1], 
+         'for the second room.')
+   choice = input()
+   if choice in events.keys():
+       pastEvents.append(choice)
+       if type(events[choice]['message']) == str():
+       if 'messages' in events[choice]:
+           for message in events[choice]['messages']:
+               print(message)
+       else:
+           print(events[choice]['message'])
+   else:
+       print('WRONG : Possible choices', list(events.keys()) )
 
 print(pastEvents)
 
@@ -259,7 +274,7 @@ print(pastEvents)
 # - Open terminal(unix/mac) or CommandLine(windows), type `python` to start an interactive python environnement
 # - Create a file named `my_super_program.py` and type `print('hello')` inside. Execute this file by typing `python3 my_super_program.py`.
 # 
-# To code you mmay need an IDE for smoother coding. I would suggest [Visual Studio Code](https://code.visualstudio.com/Download). For a python only IDE the best one would be [PyCharm](https://www.jetbrains.com/pycharm/).
+# To code you may need an IDE for smoother coding. I would suggest [Visual Studio Code](https://code.visualstudio.com/Download). For a python only IDE the best one would be [PyCharm](https://www.jetbrains.com/pycharm/).
 
 # # Functions
 # ### Quick intro
