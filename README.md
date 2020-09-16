@@ -26,3 +26,15 @@ Then run it using: `jupyter notebook`
 
 ## Install developpement environnement
 To code with ease you may need an IDE for smoother coding. I would suggest [Visual Studio Code](https://code.visualstudio.com/Download) combined with the Python plugin from Microsoft (ms-python.python). For a python only IDE the best one would be [PyCharm](https://www.jetbrains.com/pycharm/).
+
+
+### Here is the detailed procedure for Visual Studio Code set up from scratch:
+
+1. Download and install the latest Python (Python3, not 2! Python2 is dead) from here: [https://www.python.org/downloads/](https://www.python.org/downloads/)
+2. Download and install Visual Studio Code [Visual Studio Code](https://code.visualstudio.com/Download)
+3. Install the Python Microsoft plugin in Visual Studio Code by clicking on the extension panel ![Extension panel](img/vscode-extension.png "Extensions panel")
+ :
+![python extension](img/vscode-python-extension.png "python extension")
+4. Once it is done you can go back to the file view ![python extension](img/vscode-fileview.png "python extension"), create a new file with '.py' extension (i.e. a python file such as 'hello.py'), type `print('hello')` in it and save (Ctrl + S).
+5. Now you can run any python file you are viewing by clicking on the ![python extension](img/vscode-play.png "python extension") button (top right). Here is an example:
+![python extension](img/vscode-run.png "python run")
