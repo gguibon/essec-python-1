@@ -29,7 +29,9 @@ print(  'The data from the JSON file is of type:', type( movies )  )
 
 ## Check the type of the first element from the movies list
 firstMovieFromList = movies[0] # a list starts from zero
+
 firstMovieType = type( firstMovieFromList )
+
 print( 'The first element in the JSON data is of type:', firstMovieType )
 
 ## Check the first-level keys from a movie in order to see the shallow organisation of dictionaries representing movie information (uses the first movie as an example)
@@ -51,11 +53,14 @@ def getMovieWithMaxValueOfTargetedField(fieldname):
     Returns:
         dict: the whole movie dict with the maximum vote_count
     """
+
     result = {'vote_count':0} # initialized with a vote_count field associated with zero so we can erase the whole variable by a new movie dict (which also contains a vote_count field)
+    
     for movie in movies:
         currentMovieVoteCount = movie['vote_count']
         if currentMovieVoteCount > result['vote_count']:
             result = movie
+    
     return result
 
 
@@ -88,15 +93,19 @@ def getMovieByTitle(title):
     Returns:
         dict: the dictionary representing the movie's information
     """
+
     movieFound = None
+    
     for movie in movies:
         currentMovieTitle = movie['title']
         if currentMovieTitle == title: # double == for comparison
             movieFound = movie # one = for value assignement
             break # stop (break) the for loop
+    
     # print something if no movie with this title has been found
     if movieFound == None: 
         print("Movie not found :'(")
+    
     return movieFound
 
 
@@ -112,11 +121,14 @@ def getMoviesByStatus(status):
     Returns:
         list: movies dictionaries in a list
     """
+
     results = []
+    
     for movie in movies:
         currentMovieStatus = movie['status']
         if currentMovieStatus == status:
             results.append( movie )
+    
     return results
 
 
@@ -127,13 +139,17 @@ def getDifferentMovieStatuses():
     Returns:
         list: list of all different statuses encountered without redundancy
     """
+    
     statuses = []
+    
     for movie in movies:
         currentMovieStatus = movie['status']
         if currentMovieStatus not in statuses:
             statuses.append( currentMovieStatus )
+    
     ## ADVANCED other way to do it in one line: using set() (a collection without any duplicate nor order) and list comprehension (compressed list creation from a loop)
     # statuses = set( [movie['status'] for movie in movies] )
+    
     return statuses
 
 
@@ -187,8 +203,11 @@ def getMaxNumberOfVotes():
     Returns:
         int: max number of vote_count
     """
+    
     movieWithMaxVotes = getMovieWithMaxVotes()
+    
     maxNumberOfVotes = movieWithMaxVotes['vote_count']
+    
     return maxNumberOfVotes
 
 
@@ -201,13 +220,19 @@ def getMovieWithMaxRevenue():
     Returns:
         dict: movie information as dict 
     """
+
     revenueList = []
+    
     for movie in movies:
         currentMovieRevenue = movie['revenue']
         revenueList.append(  currentMovieRevenue  )
+    
     maxValue = max(revenueList)
+    
     indexOfTheMaxValue = revenueList.index(  maxValue  ) # retrieves at which index (place) is a value in a list 
+    
     movieWithMaxRevenue = movies[ indexOfTheMaxValue ] # from the list of movies get the movie by using the index (exemple: movies[5] , 5 is an index)
+    
     return movieWithMaxRevenue
 
 
@@ -289,7 +314,9 @@ def getMovieFrequenciesPerGenre():
     Returns:
         dict: { genre1 : count1, .... , genreN : countN }
     """
+    
     genresCounts = {}
+    
     for movie in movies:
         
         for genre in movie['genres']: # iterates over the list of genres
@@ -317,8 +344,10 @@ def getMostCommonGenreAssociatedTo(name):
     Returns:
 
     """
+    
     # Retrieve the first target dictionary found for later comparisons
     targetGenre = None
+    
     for movie in movies:
         if targetGenre is not None:
             break
@@ -613,10 +642,15 @@ def terminalInterface(queries):
     ''')
 
     req = ''
+    
     while req != 'quit':
+        
         print('Possible queries:')
+        
         pprint( list(queries.keys()) )
+        
         req = input('Type your selection:\n')
+        
         try:
             if 'exec' in queries[req]:
                 print( '\n##### RESULT #####\n\n')
