@@ -13,4 +13,6 @@ print(' '*24, __author__)
 
 # ATTENTION Don't forget to prepare your quick presentation (using screen sharing and discord vocal) for the last hour.
 
-# Start by opening the json file 'heros.json' 
+# Start by opening the json file 
+
+# TIP: Define functions for each todolist item 
